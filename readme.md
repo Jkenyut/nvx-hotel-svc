@@ -1,184 +1,109 @@
-## Run Project
+# NVX Hotel API
 
-1. Link API postman
-2. Dump Sql extension to your mysql database because program disable auto-migrate (hotel.sql import in your database)
-3. Build enviroment `.env`
+A RESTful API for hotel data management.
+
+## Getting Started
+
+### 1. Import Database
+
+- Import the provided `hotel.sql` file into your MySQL database.
+- **Note:** Auto-migration is disabled.
+
+### 2. Configure Environment Variables
+
+Create a `.env` file in the project root with the following content:
 
 ```
 DATABASE_URL="mysql://root@localhost:3306/hotel"
 ```
 
-4. Run to download go package
+### 3. Install Dependencies
 
-```azure
-   npm i
+Run the following command to install all required packages:
+
+```bash
+npm install
 ```
 
-5. Run program
+### 4. Start the Application
 
-```azure
+Start the server with:
+
+```bash
 npm run start
 ```
 
-6. API URI
+### 5. API Endpoints
 
-```
+- **Fetch Home Data:**  
+  `GET http://localhost:3000/v1/home`
 
- GET (http://localhost:3000/v1/home) untuk fetch data home
- GET (http://localhost:3000/static/image/{berdasarkan json image}) untuk fetch data gambar
-```
+- **Fetch Images:**  
+  `GET http://localhost:3000/static/image/{image_filename}`
 
-7. EXAMPLE JSON RESPONSE
+### 6. Example JSON Response
 
-```
+```json
 {
-    "hotelSearch": [
-        {
-            "id": 5,
-            "name": "santika",
-            "image": "5.jpeg",
-            "star": 5,
-            "review": 5,
-            "price": "359921",
-            "city": "pekalongan"
-        },
-        {
-            "id": 13,
-            "name": "hotel borabudur",
-            "image": "13.jpeg",
-            "star": 5,
-            "review": 3,
-            "price": "236200",
-            "city": "jakarta"
-        },
-        {
-            "id": 4,
-            "name": "sahid mandarin",
-            "image": "4.jpeg",
-            "star": 4,
-            "review": 2,
-            "price": "349859",
-            "city": "pekalongan"
-        },
-        {
-            "id": 6,
-            "name": "dafam pekalongan",
-            "image": "6.jpeg",
-            "star": 4,
-            "review": 1,
-            "price": "157288",
-            "city": "pekalongan"
-        },
-        {
-            "id": 11,
-            "name": "reddoodz",
-            "image": "11.jpeg",
-            "star": 4,
-            "review": 5,
-            "price": "131749",
-            "city": "jakarta"
-        },
-        {
-            "id": 14,
-            "name": "kempinski",
-            "image": "14.jpeg",
-            "star": 4,
-            "review": 3,
-            "price": "497115",
-            "city": "jakarta"
-        },
-        {
-            "id": 15,
-            "name": "intercontinental",
-            "image": "15.jpeg",
-            "star": 4,
-            "review": 5,
-            "price": "112394",
-            "city": "jakarta"
-        },
-        {
-            "id": 18,
-            "name": "mulia senayan",
-            "image": "18.jpeg",
-            "star": 4,
-            "review": 5,
-            "price": "129819",
-            "city": "jakarta"
-        }
-    ],
-    "hotelRecommendations": [
-        {
-            "id": 13,
-            "name": "hotel borabudur",
-            "image": "13.jpeg",
-            "star": 5,
-            "review": 3,
-            "price": "236200",
-            "city": "jakarta"
-        },
-        {
-            "id": 11,
-            "name": "reddoodz",
-            "image": "11.jpeg",
-            "star": 4,
-            "review": 5,
-            "price": "131749",
-            "city": "jakarta"
-        },
-        {
-            "id": 14,
-            "name": "kempinski",
-            "image": "14.jpeg",
-            "star": 4,
-            "review": 3,
-            "price": "497115",
-            "city": "jakarta"
-        },
-        {
-            "id": 15,
-            "name": "intercontinental",
-            "image": "15.jpeg",
-            "star": 4,
-            "review": 5,
-            "price": "112394",
-            "city": "jakarta"
-        },
-        {
-            "id": 18,
-            "name": "mulia senayan",
-            "image": "18.jpeg",
-            "star": 4,
-            "review": 5,
-            "price": "129819",
-            "city": "jakarta"
-        },
-        {
-            "id": 10,
-            "name": "sedang sari",
-            "image": "10.jpeg",
-            "star": 3,
-            "review": 5,
-            "price": "274942",
-            "city": "jakarta"
-        },
-        {
-            "id": 17,
-            "name": "yuan garden",
-            "image": "17.jpeg",
-            "star": 3,
-            "review": 5,
-            "price": "312825",
-            "city": "jakarta"
-        },
-        {
-            "id": 12,
-            "name": "artotel",
-            "image": "12.jpeg",
-            "star": 2,
-            "review": 5,
-            "price": "173985",
-            "city": "jakarta"
-        }
-    ]
+  "hotelSearch": [
+    {
+      "id": 5,
+      "name": "santika",
+      "image": "5.jpeg",
+      "star": 5,
+      "review": 5,
+      "price": "359921",
+      "city": "pekalongan"
+    }
+    // ...more hotels...
+  ],
+  "hotelRecommendations": [
+    {
+      "id": 13,
+      "name": "hotel borabudur",
+      "image": "13.jpeg",
+      "star": 5,
+      "review": 3,
+      "price": "236200",
+      "city": "jakarta"
+    }
+    // ...more recommendations...
+  ]
 }
 ```
+
+### 7. Additional Resources
+
+- [Postman API Collection](#) *(link to be provided)*
+
+---
+
+## Contributing
+
+Contributions are highly appreciated! To contribute:
+
+1. Fork this repository.
+2. Create a new branch:
+   ```bash
+   git checkout -b feature/your-feature
+   ```
+3. Commit your changes with clear messages.
+4. Push your branch:
+   ```bash
+   git push origin feature/your-feature
+   ```
+5. Open a pull request describing your changes.
+
+Please ensure your code adheres to the project's coding standards and includes relevant tests and documentation.
+
+## License
+
+This project is licensed under the [MIT License](https://opensource.org/license/mit). See the `LICENSE` file for
+details.
+
+## Contact
+
+For questions, suggestions, or feedback, please contact:
+
+**Satria Nur Saputro**  
+Email: [satrianursaputro06@gmail.com](mailto:satrianursaputro06@gmail.com)

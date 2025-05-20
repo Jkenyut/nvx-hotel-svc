@@ -1,11 +1,12 @@
 -- CreateTable
-CREATE TABLE `profile` (
-    `id` INTEGER NOT NULL AUTO_INCREMENT,
-    `name` VARCHAR(191) NOT NULL,
-    `image` VARCHAR(191) NOT NULL,
-    `star` TINYINT UNSIGNED NOT NULL,
+CREATE TABLE `profile`
+(
+    `id`     INTEGER      NOT NULL AUTO_INCREMENT,
+    `name`   VARCHAR(191) NOT NULL,
+    `image`  VARCHAR(191) NOT NULL,
+    `star`   TINYINT UNSIGNED NOT NULL,
     `review` TINYINT UNSIGNED NOT NULL,
-    `price` VARCHAR(191) NOT NULL,
+    `price`  VARCHAR(191) NOT NULL,
 
     UNIQUE INDEX `profile_id_key`(`id`),
     PRIMARY KEY (`id`)

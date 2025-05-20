@@ -5,7 +5,8 @@
 
 */
 -- AlterTable
-ALTER TABLE `profile` ADD COLUMN `city` VARCHAR(191) NOT NULL;
+ALTER TABLE `profile`
+    ADD COLUMN `city` VARCHAR(191) NOT NULL;
 
 -- CreateIndex
-CREATE INDEX `profile_id_city_name_idx` ON `profile`(`id`, `city`, `name`);
+CREATE INDEX `profile_id_city_name_idx` ON `profile` (`id`, `city`, `name`);
