@@ -1,6 +1,8 @@
 # NVX Hotel API
 
-A RESTful API for hotel data management.
+## Description
+
+NVX Hotel API is a RESTful service designed to manage hotel data, including hotel listings, recommendations, and image resources. It provides endpoints for retrieving hotel information and supports integration with frontend or third-party applications.
 
 ## Getting Started
 
