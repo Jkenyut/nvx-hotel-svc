@@ -43,9 +43,9 @@ Make sure you have the following installed on your machine:
 ### 2. Installation & Setup
 
 1.  **Clone the repository:**
-    ```bash
-    git clone this project
-    cd nvx-hotel-api
+    ```
+    git clone [this project]
+    cd project
     ```
 
 2.  **Install dependencies:**
